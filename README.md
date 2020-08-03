@@ -1,5 +1,7 @@
+GCP上で動作確認済み
+
 中身は以下
 
-- onlinestore : 
-- microservice-ad : 
-- kubernetes-manifests :
+- onlinestore : ECサイト
+- microservice-ad : 広告マイクロサービス
+- kubernetes-manifests : k8sマニフェストファイル
