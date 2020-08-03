@@ -37,11 +37,8 @@ public class OnlinestoreApplication extends SpringBootServletInitializer {
 	@Autowired
 	RestTemplate restTemplate;
 	
-	//TODO uncomment below lines in practice 3-4
-	/*
 	@Value("${clpr.endpoint.ad}")
 	private String adSrvEndpoint;
-	*/
 
 	Logger log;
 
@@ -70,8 +67,6 @@ public class OnlinestoreApplication extends SpringBootServletInitializer {
 			}
 		}
 		model.addAttribute("productsInRow", productsInRow);
-		//TODO uncomment below lines in practice 3-4
-		/*
 		List<String> sampleUsers = new ArrayList<String>(Arrays.asList("user01@example.com", "user02@example.com", "user03@example.com"));
 		Random rand = new Random();
 		String sampleUserId = sampleUsers.get(rand.nextInt(sampleUsers.size()));
@@ -82,7 +77,6 @@ public class OnlinestoreApplication extends SpringBootServletInitializer {
 				adSrvEndpoint+"/ad/anonymous", Ad.class);
 		}
 		model.addAttribute("ad", ad);
-		*/
 		long responseTime = System.currentTimeMillis() - startTime;
 		log.info("request processed",v("ResponseTime", responseTime));
 		return "index";
